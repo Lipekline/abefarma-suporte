@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'teste-git',
+    loadChildren: () => import('./teste-git/teste-git.module').then( m => m.TesteGitPageModule)
+  },
+  {
     path: '**',
     redirectTo: ""
   }
