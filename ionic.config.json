@@ -1,0 +1,7 @@
+{
+  "name": "abefarma-suporte-ti",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

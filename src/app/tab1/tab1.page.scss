@@ -1,0 +1,11 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.div-finalizar{
+  display: flex;
+  flex-direction: column;
+  .btn-finalizar{
+    align-self: flex-end;
+  }
+}
