@@ -1,11 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
+      
       <h3>
-      IPs das Impressoras
+      Impressoras
       </h3>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content class="ion-padding">
+  <div class="list">
+    <div class="item" *ngFor="let impressora of Impressoras" (click)="exibirInformacoes(impressora)">
+      <div class="title">
+        <h3>{{impressora.nome}}</h3>
+        <p>Clique para mais informações</p>
+      </div>
+      <ion-icon name="wifi"></ion-icon>
+    </div>
+  </div>
+</ion-content>
