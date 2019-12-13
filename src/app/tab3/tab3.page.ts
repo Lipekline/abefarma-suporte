@@ -8,7 +8,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class Tab3Page {
 
-  impressora = [
+  impressoras = [
     {
       nome: "ADM ABEFARMA",
       ip: "192.168.0.18",
@@ -47,7 +47,7 @@ export class Tab3Page {
       message += this.adicionarNovaLinhaMensagem(message, "IP: " + impressora.ip);
 
       if (impressora.toner)
-      message += this.adicionarNovaLinhaMensagem(message, "Toner: " + impressora.mascara);
+      message += this.adicionarNovaLinhaMensagem(message, "Toner: " + impressora.toner);
 
     let alert = await this.alertController.create({
       header: impressora.nome,

@@ -11,7 +11,7 @@
 
 <ion-content class="ion-padding">
   <div class="list">
-    <div class="item" *ngFor="let impressora of Impressoras" (click)="exibirInformacoes(impressora)">
+    <div class="item" *ngFor="let impressora of impressoras" (click)="exibirInformacoes(impressora)">
       <div class="title">
         <h3>{{impressora.nome}}</h3>
         <p>Clique para mais informações</p>
