@@ -1,29 +1,37 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar>         
     <ion-title>
       <h3>
-        Colaboradores
+      <ion-icon name="person"></ion-icon>
+       Colaboradores
       </h3>
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cadastrarColaborador()">
+        <h3>
+        Cadastrar
+        </h3>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <h3>Abefarma</h3>
-  <ion-list>
-    <ion-item *ngFor="let colaborador of colaboradoresAbefarma" (click)="exibirInformacoes(colaborador)">
-      <ion-label>Dougleta Jones</ion-label>
+  <ion-list *ngIf="viewBag">
+    <ion-item *ngFor="let colaborador of viewBag.colaboradoresAbefarma" (click)="exibirInformacoes(colaborador)">
+      <ion-label>{{colaborador.nome}}</ion-label>
       <ion-avatar slot="end">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        <img [src]="colaborador.foto">
       </ion-avatar>
     </ion-item>
   </ion-list>
   <h3>Consulfarma</h3>
-  <ion-list>
-    <ion-item *ngFor="let colaborador of colaboradoresConsulfarma" (click)="exibirInformacoes(colaborador)">
+  <ion-list *ngIf="viewBag">
+    <ion-item *ngFor="let colaborador of viewBag.colaboradoresConsulfarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
       <ion-avatar slot="end">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        <img [src]="colaborador.foto">
       </ion-avatar>
     </ion-item>
   </ion-list>

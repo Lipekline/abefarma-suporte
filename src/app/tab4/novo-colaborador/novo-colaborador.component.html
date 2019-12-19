@@ -1,0 +1,58 @@
+<body>
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title>Cadastro de novo Colaborador</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+      <form [formGroup]="formNovoColaboador" (submit)="salvarColaborador()">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <ion-item>
+            <ion-label position="stacked">Nome <ion-text color="danger">* Obrigatorio</ion-text>
+            </ion-label>
+            <ion-input formControlName="nome" required type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Email <ion-text color="danger">* Obrigatorio</ion-text>
+            </ion-label>
+            <ion-input formControlName="email" required type="text"></ion-input>
+          </ion-item>
+          <div formGroupName="colaboradorWindows">
+            <ion-item>
+              <ion-label position="stacked">Usuario do Windows: <ion-text color="danger">* Obrigatorio</ion-text>
+              </ion-label>
+              <ion-input formControlName="usuario" required type="text">
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Senha do Windows: <ion-text color="danger">* Obrigatorio</ion-text>
+              </ion-label>
+              <ion-input formControlName="senha" required type="text"></ion-input>
+            </ion-item>
+          </div>
+          <div formGroupName="colaboradorRede">
+            <ion-item>
+              <ion-label position="stacked">Usuario da Rede: <ion-text color="danger">* Obrigatorio</ion-text>
+              </ion-label>
+              <ion-input formControlName="usuario" required type="text">
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Senha da Rede: <ion-text color="danger">* Obrigatorio</ion-text>
+              </ion-label>
+              <ion-input formControlName="senha" required type="text"></ion-input>
+            </ion-item>
+          </div>
+          <ion-item>
+            <ion-label>Empresa</ion-label>
+            <ion-select formControlName="empresa" ok-text="Confirmar" cancel-text="Cancelar">
+              <ion-select-option value="abefarma">Abefarma</ion-select-option>
+              <ion-select-option value="consulfarma">Consulfarma</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      <ion-button type="submit">Cadastrar</ion-button>
+      </form>
+      <!--{{formNovoColaboador.getRawValue() | json}}-->
+      <ion-button (click)="fecharModal()">Voltar</ion-button>

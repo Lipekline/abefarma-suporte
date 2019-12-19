@@ -1,6 +1,43 @@
-<ion-content>
-  <h3>
-    NOME: <strong>{{colaborador.nome}}</strong>
-    </h3> 
-  <ion-button (click)="fecharModal()">Fechar</ion-button>
-</ion-content>
+<body>
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title>Colaborador</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+      <ion-card *ngIf="viewBag">
+        <img [src]="viewBag.colaborador.foto" />
+        <ion-card-header>
+          <ion-card-subtitle>{{viewBag.colaborador.empresa}}</ion-card-subtitle>
+          <ion-card-title>{{viewBag.colaborador.nome}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-icon slot="start" mode="ios" name="wifi"></ion-icon>
+            <ion-label>
+              <h2>Usuario WIFI:</h2>
+              <h3>Login: {{viewBag.colaborador.colaboradorRede.usuario}}</h3>
+              <h3>Senha: {{viewBag.colaborador.colaboradorRede.senha}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon slot="start" name="laptop"></ion-icon>
+            <ion-label>
+              <h2>Usuario Computador</h2>
+              <h3>Login: {{viewBag.colaborador.colaboradorWindows.usuario}}</h3>
+              <h3>Senha: {{viewBag.colaborador.colaboradorWindows.senha}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon slot="start" name="logo-google"></ion-icon>
+            <ion-label>
+              <h2>Email:</h2>
+              <h3>{{viewBag.colaborador.email}}</h3>
+            </ion-label>
+          </ion-item>
+
+        </ion-card-content>
+      </ion-card>
+      <ion-button (click)="fecharModal()">Fechar</ion-button>
+    </ion-content>

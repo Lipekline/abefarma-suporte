@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, ModalController } from '@ionic/angular';
+import { AlertController, ModalController, LoadingController } from '@ionic/angular';
 import { DetalhesComponent } from './detalhes/detalhes.component';
+import { NovoColaboradorComponent } from './novo-colaborador/novo-colaborador.component';
+import { HttpClient } from '@angular/common/http';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tab4',
@@ -38,10 +41,12 @@ export class Tab4Page implements OnInit {
       senha: "teste"
     }
   ]
+  viewBag: any;
 
-  constructor(private alertController: AlertController, public modalController: ModalController) { }
+  constructor(private alertController: AlertController, public modalController: ModalController, private httpClient: HttpClient, public loadingController: LoadingController) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.carregarColaboradores();
   }
 
   async exibirInformacoes(colaborador: any) {
@@ -83,6 +88,27 @@ export class Tab4Page implements OnInit {
 
     return mensagem;
 
+  }
+  async cadastrarColaborador() {
+
+    const modal = await this.modalController.create({
+    component: NovoColaboradorComponent,
+    });
+    return await modal.present();
+  }
+  async carregarColaboradores() {
+    const loading = await this.loadingController.create({
+      message: 'Carregando Colaborador...'
+    });
+    await loading.present();
+    this.httpClient.get("http://sites.consulfarma.com/abefarma-suporte/api/colaboradores").pipe(take(1)).subscribe((data: any) => {
+      console.log(data);
+      this.viewBag = data;
+    }, (err: any) => {
+      alert('deu erro');
+    }, () => {
+      loading.dismiss();
+    });
   }
 
 }
