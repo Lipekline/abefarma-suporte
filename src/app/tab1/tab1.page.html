@@ -8,14 +8,18 @@
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="carregarChamados()">
-        <h3>
-        Atualizar
-        </h3>
+        <ion-chip outline color="primary">
+          <div class="div-atualizar">
+          <ion-label>
+            Atualizar
+          </ion-label>
+          </div>
+          <ion-icon name="sync"></ion-icon>
+        </ion-chip>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <ion-card class="welcome-card" *ngFor="let chamado of viewBag?.atendimentos">
     <ion-card-header>
@@ -26,7 +30,7 @@
       <p>{{chamado.descricao}}</p>
     </ion-card-content>
     <div class="div-finalizar">
-      <ion-button (click)="finalizarChamado(chamado.atendimentoId)" fill="outline" size="small" class="btn-finalizar">
+      <ion-button (click)="finalizarChamado(chamado.atendimentoId)" size="small" class="btn-finalizar">
         finalizar</ion-button>
     </div>
   </ion-card>

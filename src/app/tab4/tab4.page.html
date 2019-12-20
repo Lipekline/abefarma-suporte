@@ -1,22 +1,31 @@
 <ion-header>
   <ion-toolbar>         
     <ion-title>
-      <h3>
-      <ion-icon name="person"></ion-icon>
-       Colaboradores
-      </h3>
+        <ion-label>
+
+          <h3>
+          <ion-icon name="person">
+          </ion-icon>
+          Colaboradores
+          </h3>
+        </ion-label>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="cadastrarColaborador()">
-        <h3>
-        Cadastrar
-        </h3>
+        <ion-chip outline color="primary">
+          <ion-label>
+            Cadastrar
+          </ion-label>
+          <ion-icon name="person-add"></ion-icon>
+        </ion-chip>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content class="ion-padding">
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar"></ion-searchbar>
+  </ion-toolbar>
   <h3>Abefarma</h3>
   <ion-list *ngIf="viewBag">
     <ion-item *ngFor="let colaborador of viewBag.colaboradoresAbefarma" (click)="exibirInformacoes(colaborador)">

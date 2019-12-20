@@ -110,5 +110,6 @@ export class Tab4Page implements OnInit {
       loading.dismiss();
     });
   }
+  
 
 }
