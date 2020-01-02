@@ -42,6 +42,7 @@ export class Tab4Page implements OnInit {
     }
   ]
   viewBag: any;
+  queryText: any;
 
   constructor(private alertController: AlertController, public modalController: ModalController, private httpClient: HttpClient, public loadingController: LoadingController) { }
 
@@ -110,6 +111,5 @@ export class Tab4Page implements OnInit {
       loading.dismiss();
     });
   }
-  
 
 }

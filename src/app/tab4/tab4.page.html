@@ -1,14 +1,15 @@
 <ion-header>
   <ion-toolbar>         
     <ion-title>
-        <ion-label>
-
+      <ion-chip outline color="primary">
+        <ion-label (click)="carregarColaboradores()">
           <h3>
-          <ion-icon name="person">
+          <ion-icon name="sync">
           </ion-icon>
-          Colaboradores
+          Atualizar
           </h3>
         </ion-label>
+      </ion-chip>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="cadastrarColaborador()">
@@ -24,7 +25,9 @@
 </ion-header>
 <ion-content class="ion-padding">
   <ion-toolbar>
-    <ion-searchbar placeholder="Buscar"></ion-searchbar>
+    <ion-searchbar placeholder="Buscar Colaborador"
+                    [(ngModel)]="querytext"
+                    (ionInput)="buscaColaborador()"></ion-searchbar>
   </ion-toolbar>
   <h3>Abefarma</h3>
   <ion-list *ngIf="viewBag">
