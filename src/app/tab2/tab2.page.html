@@ -8,7 +8,6 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content class="ion-padding">
   <div class="list">
     <div class="item" *ngFor="let wifi of wifis" (click)="exibirInformacoes(wifi)">
@@ -19,4 +18,23 @@
       <ion-icon mode="ios" name="wifi"></ion-icon>
     </div>
   </div>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <h3>
+          Emails
+        </h3>
+      </ion-title>
+    </ion-toolbar>
+    </ion-header>
+  <ion-content class="ion-padding">
+    <div class="list">
+      <div class="item" *ngFor="let email of emails" (click)="exibirInformacoesEmail(email)">
+        <div class="title">
+          <h3>{{email.nome}}</h3>
+          <p>Clique para mais informações</p>
+        </div>
+        <ion-icon mode="ios" name="wifi"></ion-icon>
+      </div>
+    </div>
 </ion-content>

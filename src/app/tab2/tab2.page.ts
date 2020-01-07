@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { async } from 'rxjs/internal/scheduler/async';
 
 @Component({
   selector: 'app-tab2',
@@ -35,6 +36,20 @@ export class Tab2Page {
       senha: "(Ficha do usuario)"
     }
   ]
+    emails = [
+      {
+        nome: "Abefarna EMAIL",
+        login: "abefarma",
+        senha: "Silvinha99"
+      },
+      {
+        nome: "Consulfarma EMAIL",
+        login: "novo_admin",
+        senha: "admin9090",
+  
+      }
+  ]
+
 
   constructor(private alertController: AlertController) { }
 
@@ -64,6 +79,23 @@ export class Tab2Page {
       header: wifi.nome,
       message: message
     });
+  }
+    async exibirInformacoesEmail(email: any) {
+
+      let message = "";
+  
+      if (email.login)
+        message += this.adicionarNovaLinhaMensagem(message, "Login: " + email.login);
+  
+      if (email.senha)
+        message += this.adicionarNovaLinhaMensagem(message, "Senha: " + email.senha);
+  
+  
+      let alert = await this.alertController.create({
+        header: email.nome,
+        message: message
+      });
+  
 
     await alert.present();
 

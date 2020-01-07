@@ -39,7 +39,7 @@
     </ion-item>
   </ion-list>
   <h3>Consulfarma</h3>
-  <ion-list *ngIf="viewBag">
+  <ion-list *ngIf="viewBag">  
     <ion-item *ngFor="let colaborador of viewBag.colaboradoresConsulfarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
       <ion-avatar slot="end">
