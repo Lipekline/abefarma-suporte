@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>
       <h3>
-        <ion-icon mode="ios" name="wifi"></ion-icon>
+        <ion-icon mode="ios" name="construct"></ion-icon>
       Pontos de Rede Wireless
       </h3>
     </ion-title>
@@ -10,7 +10,7 @@
 </ion-header>
 <ion-content class="ion-padding">
   <div class="list">
-    <div class="item" *ngFor="let wifi of wifis" (click)="exibirInformacoes(wifi)">
+    <div class="item" *ngFor="let wifi of wifis" (click)="exibirInformacoesWifi(wifi)">
       <div class="title">
         <h3>{{wifi.nome}}</h3>
         <p>Clique para mais informações</p>
@@ -22,7 +22,7 @@
     <ion-toolbar>
       <ion-title>
         <h3>
-          Emails
+          Gerenciador de Emails
         </h3>
       </ion-title>
     </ion-toolbar>
@@ -34,7 +34,7 @@
           <h3>{{email.nome}}</h3>
           <p>Clique para mais informações</p>
         </div>
-        <ion-icon mode="ios" name="wifi"></ion-icon>
+        <ion-icon mode="ios" name="at"></ion-icon>
       </div>
     </div>
 </ion-content>

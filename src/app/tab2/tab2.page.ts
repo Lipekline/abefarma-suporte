@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { async } from 'rxjs/internal/scheduler/async';
 
 @Component({
   selector: 'app-tab2',
@@ -35,7 +34,8 @@ export class Tab2Page {
       usuario: "(Ficha do usuario)",
       senha: "(Ficha do usuario)"
     }
-  ]
+  ];
+  
     emails = [
       {
         nome: "Abefarna EMAIL",
@@ -48,13 +48,13 @@ export class Tab2Page {
         senha: "admin9090",
   
       }
-  ]
+  ];
 
 
   constructor(private alertController: AlertController) { }
 
-  async exibirInformacoes(wifi: any) {
-
+  async exibirInformacoesWifi(wifi: any) {
+  
     let message = "";
 
     if (wifi.usuario)
@@ -79,6 +79,8 @@ export class Tab2Page {
       header: wifi.nome,
       message: message
     });
+
+    await alert.present();
   }
     async exibirInformacoesEmail(email: any) {
 
