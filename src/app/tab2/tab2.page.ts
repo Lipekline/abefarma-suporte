@@ -20,7 +20,7 @@ export class Tab2Page {
       senha: "Mudar123456",
       ip: "192.168.0.63",
       mascara: "23",
-      dns: "192.168.0.9",
+      dns: "192.168.0.46",
       gateway: "192.168.0.254"
 
     },

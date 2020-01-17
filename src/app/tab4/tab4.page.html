@@ -4,7 +4,7 @@
       <ion-chip outline color="primary">
         <ion-label (click)="carregarColaboradores()">
           <h3>
-          <ion-icon name="sync">
+          <ion-icon src="../assets/refresh.svg">
           </ion-icon>
           Atualizar
           </h3>
@@ -17,7 +17,7 @@
           <ion-label>
             Cadastrar
           </ion-label>
-          <ion-icon name="person-add"></ion-icon>
+          <ion-icon src="../assets/add.svg"></ion-icon>
         </ion-chip>
       </ion-button>
     </ion-buttons>
@@ -27,24 +27,20 @@
   <ion-toolbar>
     <ion-searchbar placeholder="Buscar Colaborador"
                     [(ngModel)]="querytext"
-                    (ionInput)="buscaColaborador()"></ion-searchbar>
+                    (ionInput)="buscaColaborador(colaborador)"></ion-searchbar>
   </ion-toolbar>
   <h3>Abefarma</h3>
   <ion-list *ngIf="viewBag">
     <ion-item *ngFor="let colaborador of viewBag.colaboradoresAbefarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
-      <ion-avatar slot="end">
-        <img [src]="colaborador.foto">
-      </ion-avatar>
+        <ion-icon src="../assets/user.svg"></ion-icon>
     </ion-item>
   </ion-list>
   <h3>Consulfarma</h3>
   <ion-list *ngIf="viewBag">  
     <ion-item *ngFor="let colaborador of viewBag.colaboradoresConsulfarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
-      <ion-avatar slot="end">
-        <img [src]="colaborador.foto">
-      </ion-avatar>
+        <ion-icon src="../assets/user.svg"></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>

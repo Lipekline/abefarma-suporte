@@ -11,36 +11,6 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
-
-  colaboradoresAbefarma = [
-    {
-      nome: "Dougleta Jones",
-      usuariowifi: "teste",
-      senha: "teste"
-    }
-  ];
-  colaboradoresConsulfarma = [
-    {
-      nome: "Dougleta Jones",
-      usuariowifi: "teste",
-      senha: "teste"
-    },
-    {
-      nome: "Luizeta Jones",
-      usuariowifi: "teste",
-      senha: "teste"
-    },
-    {
-      nome: "Dougleta Jones",
-      usuariowifi: "teste",
-      senha: "teste"
-    },
-    {
-      nome: "Dougleta Jones",
-      usuariowifi: "teste",
-      senha: "teste"
-    }
-  ]
   viewBag: any;
   queryText: any;
 
