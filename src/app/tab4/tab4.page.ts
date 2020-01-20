@@ -27,7 +27,14 @@ export class Tab4Page implements OnInit {
       componentProps: { colaborador: colaborador }
 
     });
-    return await modal.present();
+
+    await modal.present();
+
+    modal.onDidDismiss().then((data: any) => {
+      console.log(data);
+      if (data.data.recarregar == true)
+        this.carregarColaboradores();
+    })
 
     // let message = "";
 
@@ -63,7 +70,7 @@ export class Tab4Page implements OnInit {
   async cadastrarColaborador() {
 
     const modal = await this.modalController.create({
-    component: NovoColaboradorComponent,
+      component: NovoColaboradorComponent,
     });
     return await modal.present();
   }
@@ -82,4 +89,7 @@ export class Tab4Page implements OnInit {
     });
   }
 
+  buscaColaborador(colaborador: any) {
+
+  }
 }

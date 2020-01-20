@@ -10,12 +10,12 @@ export class Tab3Page {
 
   impressoras = [
     {
-      nome: "ADM ABEFARMA",
+      nome: "ADM_Abefarma",
       ip: "192.168.0.18",
       toner: "Toner CF226A ou CF226X"
     },
     {
-      nome: "Comercial Abefarma",
+      nome: "Comercial_Abefarma",
       ip: "192.168.0.19",
       toner: "Toner CF226A ou CF226X"
 
@@ -26,12 +26,12 @@ export class Tab3Page {
       toner:"CF510 - PRETO, CF511 - AZUL, CF512A - AMARELO, CF513A - MAGENTA"
     },
     {
-      nome: "Comercial Consulfarma",
+      nome: "Comercial_Consulfarma",
       ip: "192.168.0.14",
       toner: "Toner CF226A ou CF226X"
     },
     {
-      nome: "ADM Consulfarma",
+      nome: "ADM_Consulfarma",
       ip:"192.168.0.17",
       toner:"Toner CF226A ou CF226X"
     }

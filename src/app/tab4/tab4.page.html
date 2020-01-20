@@ -1,26 +1,21 @@
 <ion-header>
-  <ion-toolbar>         
-    <ion-title>
-      <ion-chip outline color="primary">
-        <ion-label (click)="carregarColaboradores()">
-          <h3>
-          <ion-icon src="../assets/refresh.svg">
-          </ion-icon>
-          Atualizar
-          </h3>
-        </ion-label>
-      </ion-chip>
-    </ion-title>
-    <ion-buttons slot="end">
+  <ion-toolbar>
+    <ion-buttons>
       <ion-button (click)="cadastrarColaborador()">
         <ion-chip outline color="primary">
+          <ion-icon src="../assets/add.svg"></ion-icon>
           <ion-label>
             Cadastrar
           </ion-label>
-          <ion-icon src="../assets/add.svg"></ion-icon>
         </ion-chip>
       </ion-button>
-    </ion-buttons>
+    </ion-buttons>   
+      <ion-chip slot="end" outline color="primary">
+        <ion-label (click)="carregarColaboradores()">
+          <ion-icon src="../assets/refresh.svg">
+          </ion-icon>
+        </ion-label>
+      </ion-chip>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
@@ -33,14 +28,14 @@
   <ion-list *ngIf="viewBag">
     <ion-item *ngFor="let colaborador of viewBag.colaboradoresAbefarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
-        <ion-icon src="../assets/user.svg"></ion-icon>
+        <img src="https://www.abefarma.com.br/Content/Site/images/ABEFarma.png"/>
     </ion-item>
   </ion-list>
   <h3>Consulfarma</h3>
   <ion-list *ngIf="viewBag">  
     <ion-item *ngFor="let colaborador of viewBag.colaboradoresConsulfarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
-        <ion-icon src="../assets/user.svg"></ion-icon>
+        <img src="https://www.consulfarma.com/Content/Site/images/logo-consulfarma.gif"/>
     </ion-item>
   </ion-list>
 </ion-content>
