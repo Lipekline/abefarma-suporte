@@ -38,8 +38,12 @@
 
         </ion-card-content>
       </ion-card>
-   
-      <ion-button (click)="fecharModal()">Fechar</ion-button>
-      <ion-button (click)="removerColaborador()">remover </ion-button>
-
+      <ion-row>
+      <div class="alinhaBotao">
+      <ion-button color="primary" (click)="fecharModal()">Fechar</ion-button>
+      </div>
+      <div class="separarBotao">
+      <ion-button color="primary" (click)="removerColaborador()">remover </ion-button>
+    </div>
+      </ion-row>
     </ion-content>

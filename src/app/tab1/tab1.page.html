@@ -6,13 +6,12 @@
       Chamados Abertos
       </h3>
     </ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="carregarChamados()">
-        <ion-chip outline color="primary">
-          <ion-icon src="../assets/refresh.svg"></ion-icon>
-        </ion-chip>
-      </ion-button>
-    </ion-buttons>
+    <ion-chip slot="end" outline color="primary">
+      <ion-label (click)="carregarChamados()">
+        <ion-icon src="../assets/refresh.svg">
+        </ion-icon>
+      </ion-label>
+    </ion-chip>
   </ion-toolbar>
 </ion-header>
 <ion-content>

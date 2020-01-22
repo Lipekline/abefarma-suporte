@@ -38,7 +38,7 @@ export class Tab2Page {
   
     emails = [
       {
-        nome: "Abefarna EMAIL",
+        nome: "Abefarma EMAIL",
         login: "abefarma",
         senha: "Silvinha99"
       },
