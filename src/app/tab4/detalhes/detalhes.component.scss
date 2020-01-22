@@ -1,6 +1,13 @@
-.separarBotao{
-   padding-left: 38%;
-}
-.alinhaBotao{
-    padding-left: 2%;
-}
+.div-fechar{
+    display: flex;
+    flex-direction: row;
+    .btn-fechar{
+      align-self: flex-start;
+    }
+  }
+    .btn-remover{
+    position: relative;
+      align-self: flex-end;
+      --background: #ff3300;
+    }
+  

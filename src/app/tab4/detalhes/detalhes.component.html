@@ -8,7 +8,7 @@
     <ion-content fullscreen>
       <ion-card *ngIf="viewBag">
         <ion-card-header>
-          <ion-card-subtitle>{{viewBag.colaborador.empresa}}</ion-card-subtitle>
+         <ion-card-subtitle>{{viewBag.colaborador.empresa}}</ion-card-subtitle>
           <ion-card-title>{{viewBag.colaborador.nome}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
@@ -35,15 +35,10 @@
               <h3>{{viewBag.colaborador.email}}</h3>
             </ion-label>
           </ion-item>
-
         </ion-card-content>
+        <ion-row>
+          <ion-button  (click)="fecharModal()">Fechar</ion-button>
+          <ion-button class="btn-remover" (click)="removerColaborador()">remover </ion-button>
+        </ion-row>
       </ion-card>
-      <ion-row>
-      <div class="alinhaBotao">
-      <ion-button color="primary" (click)="fecharModal()">Fechar</ion-button>
-      </div>
-      <div class="separarBotao">
-      <ion-button color="primary" (click)="removerColaborador()">remover </ion-button>
-    </div>
-      </ion-row>
     </ion-content>
