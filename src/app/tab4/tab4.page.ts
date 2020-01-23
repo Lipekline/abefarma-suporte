@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { AlertController, ModalController, LoadingController } from '@ionic/angular';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { NovoColaboradorComponent } from './novo-colaborador/novo-colaborador.component';
 import { HttpClient } from '@angular/common/http';
 import { take } from 'rxjs/operators';
+import _ from 'lodash';
 
 @Component({
   selector: 'app-tab4',
@@ -13,8 +14,14 @@ import { take } from 'rxjs/operators';
 export class Tab4Page implements OnInit {
   viewBag: any;
   queryText: any;
+  listaParaFiltrarAbefarma: any;
+  listaParaFiltrarConsulfarma: any;
 
-  constructor(private alertController: AlertController, public modalController: ModalController, private httpClient: HttpClient, public loadingController: LoadingController) { }
+  constructor(private alertController: AlertController,
+    public modalController: ModalController,
+    private httpClient: HttpClient,
+    public loadingController: LoadingController,
+    public cd: ChangeDetectorRef) { }
 
   async ngOnInit() {
     await this.carregarColaboradores();
@@ -82,14 +89,46 @@ export class Tab4Page implements OnInit {
     this.httpClient.get("http://sites.consulfarma.com/abefarma-suporte/api/colaboradores").pipe(take(1)).subscribe((data: any) => {
       console.log(data);
       this.viewBag = data;
+      this.listaParaFiltrarAbefarma = JSON.parse(JSON.stringify(this.viewBag.colaboradoresAbefarma));
+      this.listaParaFiltrarConsulfarma = JSON.parse(JSON.stringify(this.viewBag.colaboradoresConsulfarma));
     }, (err: any) => {
       alert('deu erro');
     }, () => {
       loading.dismiss();
     });
   }
+  buscaColaborador(event: any) {
 
-  buscaColaborador(colaborador: any) {
+    let keyword: string = event.detail.value.trim().toLowerCase(); 
+
+    if (keyword.length == 0) {  
+      this.listaParaFiltrarAbefarma = JSON.parse(JSON.stringify(this.viewBag.colaboradoresAbefarma));
+      this.listaParaFiltrarConsulfarma = JSON.parse(JSON.stringify(this.viewBag.colaboradoresConsulfarma));
+
+      this.cd.detectChanges();
+      return;
+    }
+
+    let listaFiltradaAbefarma = [];
+    let listaFiltradaConsulfarma = [];
+
+    this.viewBag.colaboradoresAbefarma.forEach((colaborador: any) => {
+      if (colaborador.nome.toLowerCase().includes(keyword))
+        listaFiltradaAbefarma.push(colaborador);
+    });
+
+    this.listaParaFiltrarAbefarma = listaFiltradaAbefarma;
+
+
+    this.viewBag.colaboradoresConsulfarma.forEach((colaborador: any) => {
+      if (colaborador.nome.toLowerCase().includes(keyword))
+        listaFiltradaConsulfarma.push(colaborador);
+    });
+
+    this.listaParaFiltrarConsulfarma = listaFiltradaConsulfarma;
+    this.cd.detectChanges();
 
   }
+
+
 }

@@ -20,20 +20,24 @@
 </ion-header>
 <ion-content class="ion-padding">
   <ion-toolbar>
-    <ion-searchbar placeholder="Buscar Colaborador"
+    <ion-searchbar
+     placeholder="Buscar Colaborador"
                     [(ngModel)]="querytext"
-                    (ionInput)="buscaColaborador(colaborador)"></ion-searchbar>
+                    (ionChange)="buscaColaborador($event)"
+                    debounce="250"
+                    clearInput>
+    </ion-searchbar>
   </ion-toolbar>
   <h3>Abefarma</h3>
   <ion-list *ngIf="viewBag">
-    <ion-item *ngFor="let colaborador of viewBag.colaboradoresAbefarma" (click)="exibirInformacoes(colaborador)">
+    <ion-item *ngFor="let colaborador of listaParaFiltrarAbefarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
         <img src="https://www.abefarma.com.br/Content/Site/images/ABEFarma.png"/>
     </ion-item>
   </ion-list>
   <h3>Consulfarma</h3>
   <ion-list *ngIf="viewBag">  
-    <ion-item *ngFor="let colaborador of viewBag.colaboradoresConsulfarma" (click)="exibirInformacoes(colaborador)">
+    <ion-item *ngFor="let colaborador of listaParaFiltrarConsulfarma" (click)="exibirInformacoes(colaborador)">
       <ion-label>{{colaborador.nome}}</ion-label>
         <img src="https://www.consulfarma.com/Content/Site/images/logo-consulfarma.gif"/>
     </ion-item>
