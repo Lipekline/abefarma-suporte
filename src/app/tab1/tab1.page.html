@@ -1,12 +1,12 @@
-<ion-header>
+<ion-header id="cabecalho">
   <ion-toolbar>
-    <ion-title>
+    <ion-title >
       <h3>
         <ion-icon src="../assets/chamado.svg"></ion-icon>
       Chamados Abertos
       </h3>
     </ion-title>
-    <ion-chip slot="end" outline color="primary">
+    <ion-chip slot="end" id="chip">
       <ion-label (click)="carregarChamados()">
         <ion-icon src="../assets/refresh.svg">
         </ion-icon>
@@ -14,11 +14,12 @@
     </ion-chip>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-card class="welcome-card" *ngFor="let chamado of viewBag?.atendimentos">
+<ion-content id="fundo">
+  <div id="card">
+  <ion-card *ngFor="let chamado of viewBag?.atendimentos">
     <ion-card-header>
-      <ion-card-subtitle>{{chamado.nome}}</ion-card-subtitle>
-      <ion-card-title>{{chamado.assunto}}</ion-card-title>
+      <ion-card-subtitle><h3>{{chamado.nome}}</h3></ion-card-subtitle>
+      <ion-card-title><h2>{{chamado.assunto}}</h2></ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p>{{chamado.descricao}}</p>
@@ -26,6 +27,7 @@
     <div class="div-finalizar">
       <ion-button (click)="finalizarChamado(chamado.atendimentoId)" size="small" class="btn-finalizar">
         finalizar</ion-button>
-    </div>
+      </div>
   </ion-card>
+</div>
 </ion-content>

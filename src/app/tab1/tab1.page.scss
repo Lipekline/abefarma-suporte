@@ -1,6 +1,8 @@
 .welcome-card img {
   max-height: 35vh;
   overflow: hidden;
+  --ion-background-color: #1A3152;
+
 }
 .div-finalizar{
   display: flex;
@@ -13,9 +15,33 @@
 
 h3{
       margin-bottom: 5px;
-      color: #009ae7;
+      color: #fff;
       font-size: 15px;
 }
 .div-atualizar{
   block-size: 10px;
+}
+
+#cabecalho{
+  --ion-background-color: #6a89fe;
+}
+
+#fundo{
+  --ion-background-color: #000;
+}
+
+#chip{
+  color: white;
+}
+
+ion-card-header{
+  --ion-background-color: #1A3152;
+}
+
+h2{
+  color: #fff;
+}
+
+p{
+  color: #bfbfbf;
 }
