@@ -25,7 +25,7 @@
       <p>{{chamado.descricao}}</p>
     </ion-card-content>
     <div class="div-finalizar">
-      <ion-button (click)="finalizarChamado(chamado.atendimentoId)" size="small" class="btn-finalizar">
+      <ion-button slot="end" (click)="finalizarChamado(chamado.atendimentoId)" size="small" class="btn-finalizar">
         finalizar</ion-button>
       </div>
   </ion-card>
