@@ -23,22 +23,12 @@ h3{
 }
 
 #cabecalho{
-  --ion-background-color: #6a89fe;
-}
-
-#fundo{
-  --ion-background-color: #000;
+  --ion-background-color: #363435;
 }
 
 #chip{
   color: white;
   
-}
-
-#card{
-  color: #fff;
-  display: flex;
-
 }
 
 h2{
@@ -47,4 +37,58 @@ h2{
 
 p{
   color: #bfbfbf;
+}
+.logo{
+  padding-left: 5x;
+  img{
+      width: 150px;
+      height: auto;
+  }
+}
+.preenchimento{
+  padding: 5px;
+}
+
+#container {
+  overflow: hidden;
+  width: 100%;
+  min-height: 36px; /* Remember absolute positioning is outside the page flow! */
+  position: relative;
+}
+#elementoEsq {
+  position: absolute;
+  font-size: 3px;
+}
+#elementoMid {
+  left: 30%;
+  position: relative;
+  width: 10px;
+}
+#elementoDir {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  width: 100px;
+  img{
+    width: 500px;
+    height: auto;
+  }
+}
+
+#fundoRoxo{
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  background-color: #5c1eff;
+  border-radius: 30px;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+#tamanhoChamados{
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  width: 50%;
+  height: 50%;
 }

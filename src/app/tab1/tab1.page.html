@@ -1,22 +1,30 @@
 <ion-header id="cabecalho">
   <ion-toolbar>
-    <ion-title >
-      <h3>
-        <ion-icon src="../assets/chamado.svg"></ion-icon>
-      Chamados Abertos
-      </h3>
+    <ion-title>
+      <div id="container">
+      <div id="elementoEsq">
+      <ion-avatar color="white">
+      </ion-avatar>
+      </div>
+      <div id="elementoMid">
+        <p>
+          Bem-Vindo
+        </p>
+        <h3>
+          Luizeta Jones
+        </h3>
+      </div>
+    <ion-item class="logo"(click)="carregarChamados()">
+        <img src="../assets/ABEFarmaB.png">
+    </ion-item>
+      </div>
     </ion-title>
-    <ion-chip slot="end" id="chip">
-      <ion-label (click)="carregarChamados()">
-        <ion-icon src="../assets/refresh.svg">
-        </ion-icon>
-      </ion-label>
-    </ion-chip>
   </ion-toolbar>
 </ion-header>
-<ion-content id="fundo">
-  <div id="card">
-  <ion-card *ngFor="let chamado of viewBag?.atendimentos">
+<ion-content>
+  <ion-slides>
+  <div id="fundoRoxo" *ngFor="let chamado of viewBag?.atendimentos">
+  <ion-card >
     <ion-card-header>
       <ion-card-subtitle><h3>{{chamado.nome}}</h3></ion-card-subtitle>
       <ion-card-title><h2>{{chamado.assunto}}</h2></ion-card-title>
@@ -30,4 +38,5 @@
       </div>
   </ion-card>
 </div>
+</ion-slides>
 </ion-content>
