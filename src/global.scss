@@ -24,3 +24,16 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "assets/fonts/proxima-nova/proxima-nova.css";
+
+:root {
+    --ion-font-family: "Proxima Nova";
+    --ion-color-primary: #405aa1;
+  }
+  :root[mode="md"] {
+    --ion-font-family: "Proxima Nova";
+  }
+  :root[mode="ios"] {
+    --ion-font-family: "Proxima Nova";
+  }
+  

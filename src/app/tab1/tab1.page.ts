@@ -11,6 +11,11 @@ import { async } from 'q';
 })
 export class Tab1Page implements OnInit {
 
+  slideOpts = {
+    initialSlide: 0,
+    slidesPerView: 1.4,
+    speed: 400
+  };
 
   viewBag: any;
 

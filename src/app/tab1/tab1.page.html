@@ -2,41 +2,72 @@
   <ion-toolbar>
     <ion-title>
       <div id="container">
-      <div id="elementoEsq">
-      <ion-avatar color="white">
-      </ion-avatar>
-      </div>
-      <div id="elementoMid">
-        <p>
-          Bem-Vindo
-        </p>
-        <h3>
-          Luizeta Jones
-        </h3>
-      </div>
-    <ion-item class="logo"(click)="carregarChamados()">
+        <div class="foto-colaborador"></div>
+        <div class="boas-vindas">
+          <p>Bem-Vindo</p>
+          <h3>Luizeta Jones</h3>
+        </div>
         <img src="../assets/ABEFarmaB.png">
-    </ion-item>
       </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-slides>
-  <div id="fundoRoxo" *ngFor="let chamado of viewBag?.atendimentos">
-  <ion-card >
-    <ion-card-header>
-      <ion-card-subtitle><h3>{{chamado.nome}}</h3></ion-card-subtitle>
-      <ion-card-title><h2>{{chamado.assunto}}</h2></ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>{{chamado.descricao}}</p>
-    </ion-card-content>
-    <div class="div-finalizar">
-      <ion-button slot="end" (click)="finalizarChamado(chamado.atendimentoId)" size="small" class="btn-finalizar">
-        finalizar</ion-button>
+  <div class="container-linha">
+    <div class="nome-chamados">
+      <h3>Novos Chamados</h3>
+    </div>
+   <div class="btn-ver-todos">
+   <ion-button>Ver Todos</ion-button>
+   </div>
+
+  </div>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let chamado of viewBag?.atendimentos">
+      <div class="fundo-roxo">
+
+
+         
+
+          <h3 class="titulo-chamado">Não estou conseguindo imprimir...</h3>
+
+
+          <div class="autor">
+
+            <div class="foto-autor"></div>
+
+            <div class="nome-departamento">
+              <h3 class="nome">Douglas Neves</h3>
+              <p class="cargo">Comercia/Abefarma</p>
+            </div>
+
+         
+
+        </div>
+
+
+
+
+<!-- 
+
+        <ion-card-header>
+          <ion-card-subtitle>
+            <h3>{{chamado.nome}}</h3>
+          </ion-card-subtitle>
+          <ion-card-title>
+            <h2>{{chamado.assunto}}</h2>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{chamado.descricao}}</p>
+        </ion-card-content>
+        <div class="div-finalizar">
+          <ion-button slot="end" (click)="finalizarChamado(chamado.atendimentoId)" size="small" class="btn-finalizar">
+            <h3>finalizar</h3>
+          </ion-button>
+        </div> -->
+
       </div>
-  </ion-card>
-</div>
-</ion-slides>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
