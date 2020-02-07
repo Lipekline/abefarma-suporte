@@ -172,32 +172,15 @@ p {
   width: 50%;
   height: 50%;
 }
-#containerLinha {
-  padding: 5%;
-  padding-left: 10%;
-  padding-top: 0%;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  margin-top: 50px;
-}
-#btn-vertodos {
-  margin-left: 30px;
-  align-self: flex-end;
-  border: 1px;
-  border-radius: 20px;
-  width: 100px;
-  height: 25px;
-
-  h4 {
-    font-size: 12px;
-    --ion-font-family: "Proxima Nova";
-  }
-}
 .container-linha{
   display: flex;
   margin-left: 50px;
   margin-top: 50px;
  .nome-chamados{
+
+  display: flex;
+  margin-right: 60px;
+  margin-bottom: 5px;
 
   }
   h3{
@@ -206,4 +189,5 @@ p {
     font-size: 14px;
     font-weight: 500;
 }
+
 }
