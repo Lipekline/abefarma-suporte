@@ -175,7 +175,7 @@ p {
 .container-linha{
   display: flex;
   margin-left: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
  .nome-chamados{
 
   display: flex;
@@ -190,4 +190,52 @@ p {
     font-weight: 500;
 }
 
+
+}
+.container-linha-baixo{
+  display: flex;
+  margin-left: 50px;
+  margin-top: 20px;
+ .nome-contatos{
+
+  display: flex;
+  margin-right: 60px;
+  margin-top: 0px;
+
+  }
+  h3{
+    color: #fff;
+    --ion-font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .btn-ver-mais{
+    margin-top: 5px;
+    margin-left: 50px;
+  }
+}
+.contato{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-top: 10px;
+  
+  width: 50px;
+  .foto-colaborador{
+    width: 48px;
+    height: 48px;
+    background-image: url("http://www.intranet.icosmetologia.com.br/Arquivos/Usuario/Foto-093158.jpg");
+    background-size: 160%;
+    background-position: top center;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+  }
 }

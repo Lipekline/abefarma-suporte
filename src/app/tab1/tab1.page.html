@@ -21,12 +21,9 @@
     <ion-button size="small" color="success" expand="block" shape="round">Ver Mais</ion-button>
    </div>
   </div>
-  <ion-slides pager="true" [options]="slideOpts">
+  <ion-slides pager="false" [options]="slideOpts">
     <ion-slide *ngFor="let chamado of viewBag?.atendimentos">
       <div class="fundo-roxo">
-
-
-         
 
           <h3 class="titulo-chamado">Não estou conseguindo imprimir...</h3>
 
@@ -44,29 +41,24 @@
 
         </div>
 
-
-
-
-<!-- 
-
-        <ion-card-header>
-          <ion-card-subtitle>
-            <h3>{{chamado.nome}}</h3>
-          </ion-card-subtitle>
-          <ion-card-title>
-            <h2>{{chamado.assunto}}</h2>
-          </ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>{{chamado.descricao}}</p>
-        </ion-card-content>
-        <div class="div-finalizar">
-          <ion-button slot="end" (click)="finalizarChamado(chamado.atendimentoId)" size="small" class="btn-finalizar">
-            <h3>finalizar</h3>
-          </ion-button>
-        </div> -->
-
       </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="container-linha-baixo">
+    <div class="nome-contatos">
+      <h3>Contatos</h3>
+    </div>
+   <div class="btn-ver-mais">
+    <ion-button slot="end" size="small" color="success" expand="block" shape="round">Ver Mais</ion-button>
+   </div>
+  </div>
+  <ion-slides pager="false" [options]="slideOpts">
+    <ion-slide>
+      <div class="contato" *ngFor="let chamado of viewBag?.atendimentos">
+        <div class="foto-colaborador"></div>
+        <h3>Luizeta Jones</h3>
+      </div>
+
     </ion-slide>
   </ion-slides>
 </ion-content>
