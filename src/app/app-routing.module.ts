@@ -13,11 +13,12 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: ""
-  },
-  {
+  },  {
     path: 'tab0',
     loadChildren: () => import('./tab0/tab0.module').then( m => m.Tab0PageModule)
   },
+
+
 
 
 ];
