@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tab0</ion-title>
+    <ion-title>
+      <h3>
+        <ion-icon name="print"></ion-icon>
+      Impressoras
+      </h3>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<h3>teste</h3>
+<ion-content class="ion-padding">
+  <div class="list">
+    <div class="item" *ngFor="let impressora of impressoras" (click)="exibirInformacoes(impressora)">
+      <div class="title">
+        <h3>{{impressora.nome}}</h3>
+        <p>Clique para mais informações</p>
+      </div>
+      <ion-icon name="print"></ion-icon>
+    </div>
+  </div>
 </ion-content>

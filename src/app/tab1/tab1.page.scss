@@ -22,7 +22,7 @@
   block-size: 10px;
 }
 
-#cabecalho {
+.cabecalho {
   --ion-background-color: #151515;
 }
 
@@ -52,8 +52,9 @@ p {
   display: flex;
   overflow: hidden;
   width: 100%;
-  min-height: px; /* Remember absolute positioning is outside the page flow! */
+  margin-left: 20px;
   position: relative;
+  --ion-background-color: #151515;
 
   img{
     width: auto;
@@ -84,7 +85,7 @@ p {
 }
 
 .fundo-roxo {   
-  padding: 20px;
+  padding: 15px;
   background-color: #5c1eff;
   border-radius: 30px;
   width: 100%;
@@ -111,9 +112,9 @@ p {
         width: 48px;
         height: 48px;
         background-image: url("http://www.intranet.icosmetologia.com.br/Arquivos/Usuario/Foto-093158.jpg");
-        background-size: 160%;
+        background-size: 200%;
         background-position: top center;
-        border-radius: 50%;
+        border-radius: 30%;
         margin-right: 10px;
       }
       .nome-departamento {
@@ -150,6 +151,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 5px;
   h3{
           color: #fff;
           font-weight: 900;
@@ -188,6 +190,9 @@ p {
     --ion-font-family: "Proxima Nova";
     font-size: 14px;
     font-weight: 500;
+}
+.btn-ver-todos{
+  margin-top: 5px;
 }
 
 

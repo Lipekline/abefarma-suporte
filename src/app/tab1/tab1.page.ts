@@ -17,6 +17,12 @@ export class Tab1Page implements OnInit {
     speed: 400
   };
 
+  slide2Opts = {
+    initialSlide: 0,
+    slidesPerView: 1.2,
+    speed: 1000
+  };
+
   viewBag: any;
 
   constructor(public httpClient: HttpClient, public loadingController: LoadingController, public alertController: AlertController) { }
