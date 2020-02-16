@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LoadingController, AlertController } from '@ionic/angular';
+import { AlertController, ModalController, LoadingController } from '@ionic/angular';
 import { take } from "rxjs/operators";
 import { async } from 'q';
+import { TelaLoginComponent } from './tela-login/tela-login.component';
 
 @Component({
   selector: 'app-tab1',
@@ -25,13 +26,15 @@ export class Tab1Page implements OnInit {
 
   viewBag: any;
 
-  constructor(public httpClient: HttpClient, public loadingController: LoadingController, public alertController: AlertController) { }
+  constructor(public httpClient: HttpClient, public loadingController: LoadingController, public alertController: AlertController, public modalController: ModalController) { }
 
 
 
   async ngOnInit() {
 
     await this.carregarChamados();
+
+    await this.telaLogin();
 
   }
 
@@ -79,5 +82,14 @@ export class Tab1Page implements OnInit {
 
   }
 
+  async telaLogin() {
 
+    const modal = await this.modalController.create({
+      component: TelaLoginComponent,
+    });
+    return await modal.present();
+  }
 }
+
+
+

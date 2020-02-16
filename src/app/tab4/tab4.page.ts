@@ -24,7 +24,7 @@ export class Tab4Page implements OnInit {
     public cd: ChangeDetectorRef) { }
 
   async ngOnInit() {
-    await this.cadastrarColaborador() 
+    await this.cadastrarColaborador(); 
     
     await this.carregarColaboradores();
   }
