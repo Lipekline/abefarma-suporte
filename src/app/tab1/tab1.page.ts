@@ -34,8 +34,6 @@ export class Tab1Page implements OnInit {
 
     await this.carregarChamados();
 
-    await this.telaLogin();
-
   }
 
   async carregarChamados() {

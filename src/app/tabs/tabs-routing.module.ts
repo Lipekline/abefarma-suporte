@@ -54,12 +54,17 @@ const routes: Routes = [
       }
     ]
   },
-  {
+ {
     path: '',
     redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
+    pathMatch: ''
   },
-];
+  {
+    path: 'tela-login',
+    loadChildren: () =>
+      import('../tela-login/tela-login.module').then(m => m.TelaLoginPageModule)
+    }
+  ]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
