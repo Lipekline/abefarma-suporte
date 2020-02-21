@@ -36,7 +36,7 @@ img{
  }
 }
 .input{
-    margin-left: 90px;
+    margin-left: 30px;
 .borda{
     border: 1px;
     border-color: #000;
@@ -44,11 +44,12 @@ img{
 }
 }
 .login{
-    width: 100%;
+    width: 240px;
     height: 30px;
-    background-color: #eeeded;
+    background-color: #f5f5f5;
     border-radius: 20px;
     padding-right: 10px;
+    padding-left: 5px;
 }
 .centro{
     text-align: center;
@@ -56,9 +57,9 @@ img{
 .senha{
     margin-top: 7px;
     margin-bottom: 15px;
-    width: 100%;
+    width: 240px;
     height: 30px;
-    background-color: #eeeded;
+    background-color: #f5f5f5;
     border-radius: 20px;
     padding-right: 10px;
 }
