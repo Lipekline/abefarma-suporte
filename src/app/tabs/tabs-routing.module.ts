@@ -56,7 +56,7 @@ const routes: Routes = [
   },
  {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tela-login',
     pathMatch: ''
   },
   {

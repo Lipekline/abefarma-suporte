@@ -23,8 +23,7 @@ export class Tab4Page implements OnInit {
     public loadingController: LoadingController,
     public cd: ChangeDetectorRef) { }
 
-  async ngOnInit() {
-    await this.cadastrarColaborador(); 
+  async ngOnInit() { 
     
     await this.carregarColaboradores();
   }
