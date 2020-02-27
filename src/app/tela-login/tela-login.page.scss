@@ -1,85 +1,58 @@
-body{
-    background-color: #010103;
-   background-image: url("https://i.ibb.co/C6TFphr/fundo2.jpg");
+ion-content {
+  --background: null;
+  background-image: url("/assets/background-gradient.svg");
+  background-size: cover;
 }
-.ajuste{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 50px;
-}
-/*.quadrado-branco{
-    width: 100%;
-    height: 250px;
-    margin-top: 180px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex; 
-    
-}*/
-.foto{
-    width: 70%;
-    height: 10px;
-img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-top: 30px;
-}
-}
-.input{
-    margin-left: 40px;
-    margin-top: 160px;
-.borda{
-    border: 1px;
-    border-color: #000;
-    border-radius: 5px;
-}
-}
-.login{
-    width: 240px;
-    height: 30px;
-    background-color: #383838;
-    border-radius: 20px;
-    padding-right: 10px;
-    padding-left: 5px;
-    
-}
-ion-input{
-    --placeholder-color: #fff;
-    --placeholder-opacity: 1;
-    color: #fff;
-}
-.centro{
-    text-align: center;
-}
-.senha{
-    margin-top: 10px;
-    margin-bottom: 15px;
-    width: 240px;
-    height: 30px;
-    background-color: #383838;
-    border-radius: 20px;
-    padding-right: 10px;
-}
-.btn-entrar{
-    margin-left: 60px;
-ion-button{
-    background-color: #309ac1;
-    border-radius: 15px;
-}
-}
-.texto{
-    margin-left: 90px;
-    width: 110%;
-    margin-top: 530px;
-    
-    h3{
-        font-weight: 700;
-        font-size: 12px;
-        color: #fff;
 
+.corpo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+
+  .logo {
+    max-width: 200px;
+  }
+
+  .campos{
+      width: 80%;
+    ion-input {
+        --background: null;
+        background-color: #383838;
+        width: 100%;
+        text-align: center; 
+        border-radius: 500px;
+        color: #fff;
     }
-     
- }
+
+    ion-input:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    ion-button{
+        background-color: #309ac1;
+        max-width: 60%;
+        border-radius: 500px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+  }
+  .rodape {
+    color: #fff;
+    display: flex;
+    h3 {
+      font-size: 12px;
+    }
+    a{
+        font-size: 12px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #309ac1;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+  }
+}
+ 
