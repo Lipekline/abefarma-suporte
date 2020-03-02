@@ -17,7 +17,7 @@ ion-content {
   }
 
   .campos{
-      width: 80%;
+      width: 80\%;
     ion-input {
         --background: null;
         background-color: #383838;
@@ -29,6 +29,7 @@ ion-content {
 
     ion-input:not(:first-child) {
         margin-top: 10px;
+        padding-right: 5px;
     }
 
     ion-button{

@@ -19,7 +19,7 @@
       <img class="wifi" src="../assets/wifi.png"/>
     </div>
   </div>
-    <h3>email</h3>
+    <h3>Email</h3>
     <div class="list">
       <div class="item" *ngFor="let email of emails" (click)="exibirInformacoesEmail(email)">
         <div class="title">
@@ -30,14 +30,16 @@
       </div>
     </div>
     
-      <h3>impressoras</h3>
+      <h3>Impressoras</h3>
       <div class="list">
-        <div class="item" *ngFor="let email of emails" (click)="exibirInformacoesEmail(email)">
+        <div class="item" *ngFor="let impressora of impressoras" (click)="exibirInformacoesImpressora(impressora)">
           <div class="title">
-            <h3>{{email.nome}}</h3>
+            <h3>{{impressora.nome}}</h3>
             <p>Clique para mais informações</p>
           </div>
-          <ion-icon src="../assets/outlook.svg"></ion-icon>
+          <ion-icon name="print"></ion-icon>
         </div>
       </div>
+      <br>
+      <br>
 </ion-content>

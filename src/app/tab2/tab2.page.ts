@@ -50,6 +50,34 @@ export class Tab2Page {
       }
   ];
 
+  impressoras = [
+    {
+      nome: "ADM_Abefarma",
+      ip: "192.168.0.18",
+      toner: "Toner CF226A ou CF226X"
+    },
+    {
+      nome: "Comercial_Abefarma",
+      ip: "192.168.0.19",
+      toner: "Toner CF226A ou CF226X"
+
+    },
+    {
+      nome: "DIRETORIA",
+      ip: "192.168.0.15",
+      toner:"CF510 - PRETO, CF511 - AZUL, CF512A - AMARELO, CF513A - MAGENTA"
+    },
+    {
+      nome: "Comercial_Consulfarma",
+      ip: "192.168.0.14",
+      toner: "Toner CF226A ou CF226X"
+    },
+    {
+      nome: "ADM_Consulfarma",
+      ip:"192.168.0.17",
+      toner:"Toner CF226A ou CF226X"
+    }
+  ]
 
   constructor(private alertController: AlertController) { }
 
@@ -98,6 +126,24 @@ export class Tab2Page {
         message: message
       });
   
+
+    await alert.present();
+
+  }
+  async exibirInformacoesImpressora(impressora: any) {
+
+    let message = "";
+
+      if (impressora.ip)
+      message += this.adicionarNovaLinhaMensagem(message, "IP: " + impressora.ip);
+
+      if (impressora.toner)
+      message += this.adicionarNovaLinhaMensagem(message, "Toner: " + impressora.toner);
+
+    let alert = await this.alertController.create({
+      header: impressora.nome,
+      message: message
+    });
 
     await alert.present();
 
