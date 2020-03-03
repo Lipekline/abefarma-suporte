@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { AlertController, ModalController, LoadingController } from '@ionic/angular';
 import { take } from "rxjs/operators";
 import { async } from 'q';
-import { TelaLoginComponent } from './tela-login/tela-login.component';
 
 @Component({
   selector: 'app-tab1',
@@ -78,14 +77,6 @@ export class Tab1Page implements OnInit {
     });
 
 
-  }
-
-  async telaLogin() {
-
-    const modal = await this.modalController.create({
-      component: TelaLoginComponent,
-    });
-    return await modal.present();
   }
 }
 

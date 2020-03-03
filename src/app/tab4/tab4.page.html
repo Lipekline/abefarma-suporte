@@ -31,15 +31,15 @@
   <h3>Abefarma</h3>
   <ion-list *ngIf="viewBag">
     <ion-item *ngFor="let colaborador of listaParaFiltrarAbefarma" (click)="exibirInformacoes(colaborador)">
-      <ion-label>{{colaborador.nome}}</ion-label>
-        <img src="https://www.abefarma.com.br/Content/Site/images/ABEFarma.png"/>
+      <ion-label color="light">{{colaborador.nome}}</ion-label>
+        <img src="../assets/ABEFarmaB.png"/>
     </ion-item>
   </ion-list>
   <h3>Consulfarma</h3>
   <ion-list *ngIf="viewBag">  
     <ion-item *ngFor="let colaborador of listaParaFiltrarConsulfarma" (click)="exibirInformacoes(colaborador)">
-      <ion-label>{{colaborador.nome}}</ion-label>
-        <img src="https://www.consulfarma.com/Content/Site/images/logo-consulfarma.gif"/>
+      <ion-label color="light">{{colaborador.nome}}</ion-label>
+        <img src="../assets/consulfarma-white.png"/>
     </ion-item>
   </ion-list>
 </ion-content>

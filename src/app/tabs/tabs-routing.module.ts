@@ -47,13 +47,7 @@ const routes: Routes = [
           }
         ]
       },
-      {
-      path: 'tab0',
-      loadChildren: () =>
-        import('../tab0/tab0.module').then(m => m.Tab0PageModule)
-      }
-    ]
-  },
+    
  {
     path: '',
     redirectTo: '/tabs/tab1',
@@ -65,6 +59,8 @@ const routes: Routes = [
       import('../tela-login/tela-login.module').then(m => m.TelaLoginPageModule)
     }
   ]
+},
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
