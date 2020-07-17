@@ -17,19 +17,19 @@ ion-content {
   }
 
   .campos{
-      width: 80\%;
+    width: 70%;
     ion-input {
         --background: null;
         background-color: #383838;
-        width: 100%;
-        text-align: center; 
+        text-align: center;
+        width: 100%; 
         border-radius: 500px;
         color: #fff;
     }
 
     ion-input:not(:first-child) {
         margin-top: 10px;
-        padding-right: 5px;
+        padding-left: 0px;
     }
 
     ion-button{

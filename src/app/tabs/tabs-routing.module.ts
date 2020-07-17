@@ -52,12 +52,7 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/tab1',
     pathMatch: ''
-  },
-  {
-    path: 'tela-login',
-    loadChildren: () =>
-      import('../tela-login/tela-login.module').then(m => m.TelaLoginPageModule)
-    }
+  }
   ]
 },
 ]
