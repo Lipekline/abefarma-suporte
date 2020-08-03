@@ -35,10 +35,6 @@ const routes: Routes = [
     redirectTo: ""
   },
 
-  {
-    path: '*',
-    loadChildren: () => import('./tela-login/tela-login.module').then( m => m.TelaLoginPageModule)
-  },
 
 
 
