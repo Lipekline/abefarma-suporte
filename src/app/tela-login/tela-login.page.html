@@ -6,15 +6,16 @@
   
     <div class="campos">
       
-      <ion-input type="text" placeholder="Usuario"></ion-input>
+      <ion-input type="Email" placeholder="Email" [(ngModel)]="userLogin.email"></ion-input>
 
-      <ion-input type="password" placeholder="Senha"></ion-input>
+      <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.password"></ion-input>
 
       <ion-button size="small" color="none" expand="block">Entrar</ion-button>
 
     </div>
+    
     <div class="rodape">
-      <h3>Esqueceu a Senha ?</h3> <a href="https://www.google.com">Clique aqui</a>
+      <h3>Esqueceu a Senha ?</h3> <a href="../tab1/">Clique aqui</a>
     </div>
   </div>
 

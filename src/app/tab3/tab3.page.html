@@ -2,21 +2,16 @@
   <ion-toolbar>
     <ion-title>
       <h3>
-        <ion-icon name="print"></ion-icon>
-      Impressoras
+        <ion-icon name="albums"></ion-icon>
+      Chamados
       </h3>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <div class="list">
-    <div class="item" *ngFor="let impressora of impressoras" (click)="exibirInformacoes(impressora)">
-      <div class="title">
-        <h3>{{impressora.nome}}</h3>
-        <p>Clique para mais informações</p>
-      </div>
-      <ion-icon name="print"></ion-icon>
-    </div>
+<ion-content >
+  <div class="foto-colaborador"></div>
+  <div class="fundo-roxo">
   </div>
+
 </ion-content>

@@ -1,48 +1,36 @@
 ion-title{
   --background: null;
-        background-color: #383838;
+        background-color: #171717;
 }
 
 h3{
     font-weight: 900;
         margin-bottom: 5px;
-        color: #009ae7;
+        color: #fff;
         font-size: 17px;
+
 }
 
-.list {
-  .item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    color: #fff;
-    background-color: #fff;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #009ae7;
-    .title {
-      h3,
-      p {
-        margin: 0;
-      }
-      h3 {
-        font-weight: 900;
-        margin-bottom: 5px;
-        color: #009ae7;
-      }
-      p {
-        font-size: 10px;
-        color: #009ae7;
-      }
-    }
-    ion-icon {
-      font-size: 30px;
-      color: #009ae7;
-    }
-    ion-title{
-        font-weight: 900;
-        color: #009ae7;
-    }
-  }
+.foto-colaborador{
+  width: 48px;
+  height: 48px;
+  background-image: url("http://www.intranet.icosmetologia.com.br/Arquivos/Usuario/Foto-093158.jpg");
+  background-size: 160%;
+  background-position: top center;
+  border-radius: 50%;
+  margin-right: 1px;
+  margin-top: 30px;
+}
+
+.fundo-roxo {   
+  padding: 15px;
+  background-color: #5c1eff;
+  border-radius: 30px;
+  width: 85%;
+  margin: 0px 20px;
+  min-height: 130px;
+}
+
+.ajuste{
+  display: flex;
 }

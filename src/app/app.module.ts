@@ -11,6 +11,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FcmService } from './services/fcm.service';
 import { FirebaseX } from '@ionic-native/firebase-x/ngx';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 const config = {
   apiKey: "AIzaSyBR-KeDDI5nMrCKlIHCnm4bALLA4LnFDow",
@@ -29,7 +31,8 @@ const config = {
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule],
   providers: [
     StatusBar,
