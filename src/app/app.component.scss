@@ -1,3 +1,50 @@
 .fundo{
     --ion-background-color: #000;
 }
+.fundoBar{
+    --ion-background-color: #151515;
+}
+ion-tab-bar{
+    height: 70px;
+}
+
+ion-label{
+    color: #fff;
+}
+
+#quadradoVermelho{
+    align-items: center;
+    padding: 7px;
+    background-color: #b43337;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-left: 5px;
+
+}
+
+#quadradoBranco{
+    align-items: center;
+    padding: 7px;
+    background-color: #fff;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+#quadradoVerde{
+    align-items: center;
+    padding: 7px;
+    background-color: #40b655;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+#quadradoRoxo{
+    align-items: center;
+    padding: 7px;
+    background-color: #3832b6;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-left: 5px;
+}

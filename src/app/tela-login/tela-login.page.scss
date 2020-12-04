@@ -25,7 +25,13 @@ ion-content {
         width: 100%; 
         border-radius: 500px;
         color: #fff;
+
+        input[type="text"]::placeholder {  
+          
+          text-align: left;
     }
+
+  }
 
     ion-input:not(:first-child) {
         margin-top: 10px;
