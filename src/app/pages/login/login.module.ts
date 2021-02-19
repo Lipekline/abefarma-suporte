@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TelaLoginPageRoutingModule } from './tela-login-routing.module';
+import { LoginPageRoutingModule } from './login-routing.module';
 
-import { TelaLoginPage } from './tela-login.page';
+import { LoginPage } from './login.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TelaLoginPageRoutingModule
+    LoginPageRoutingModule
   ],
-  declarations: [TelaLoginPage]
+  declarations: [LoginPage]
 })
-export class TelaLoginPageModule {}
+export class LoginPageModule { }

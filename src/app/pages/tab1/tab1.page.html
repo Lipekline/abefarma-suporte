@@ -4,7 +4,7 @@
         <div class="foto-colaborador"></div>
         <div class="boas-vindas">
           <p>Bem-Vindo</p>
-          <h5> <a href="../tela-login/"> Sair </a> </h5>
+          <h5> <a routerLink="/login" routerDirection="back" > Sair </a> </h5>
           <h3>Luizeta Jones</h3>
         </div>
        
@@ -25,19 +25,16 @@
     <ion-slide *ngFor="let chamado of viewBag?.atendimentos">
       <div class="fundo-roxo">
 
-          <h3 class="titulo-chamado">Não estou conseguindo imprimir...</h3>
-
+          <h3 class="titulo-chamado">{{chamado.assunto}}</h3> 
 
           <div class="autor">
 
             <div class="foto-autor"></div>
 
             <div class="nome-departamento">
-              <h3 class="nome">{{viewBag.colaborador.nome}}</h3>
+              <h3 class="nome">{{chamado.nome}}</h3>
               <p class="cargo">Comercia/Abefarma</p>
-            </div>
-
-         
+            </div> 
 
         </div>
 

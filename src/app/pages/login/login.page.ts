@@ -3,18 +3,19 @@ import { User } from 'firebase';
 import { async } from 'rxjs/internal/scheduler/async';
 
 @Component({
-  selector: 'app-tela-login',
-  templateUrl: './tela-login.page.html',
-  styleUrls: ['./tela-login.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
-export class TelaLoginPage implements OnInit {
-   
+export class LoginPage implements OnInit {
+
+  userLogin: any;
 
   constructor() { }
 
   ngOnInit() {
 
-   
+
   }
 
 }

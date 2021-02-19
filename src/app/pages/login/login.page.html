@@ -3,17 +3,17 @@
 
   <div class="corpo">
     <div class="logo"> <img src="../assets/ABEFarmaB.png"></div>
-  
+
     <div class="campos">
-      
-      <ion-input type="Email" placeholder="Email" [(ngModel)]="userLogin.email"></ion-input>
 
-      <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.password"></ion-input>
+      <ion-input type="Email" placeholder="Email"></ion-input>
 
-      <ion-button href="../tab1/" size="small" color="none" expand="block">Entrar</ion-button>
+      <ion-input type="password" placeholder="Senha"></ion-input>
+
+      <ion-button href="../tab1/" size="small" color="none" expand="block" routerLink="/shared/home">Entrar</ion-button>
 
     </div>
-    
+
     <div class="rodape">
       <h3>Esqueceu a Senha ?</h3> <a href="../tab1/">Clique aqui</a>
     </div>
@@ -21,7 +21,7 @@
 
 
 
- 
+
   <!-- 
   <div class="ajuste">
     <div class="foto">
